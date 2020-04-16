@@ -32,7 +32,7 @@ describe('Test suite', () => {
     });
   });
 
-  test('Clients should receive broadcast message', async () => {
+  test('Clients should receive broadcast messages', async () => {
     const messageToBroadcast = 'Hello from client one!!!';
     const client = new ClientTestHelper(HOST, PORT);
     await client.connectToServer();
