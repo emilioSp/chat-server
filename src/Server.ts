@@ -11,7 +11,7 @@ export default class Server {
   constructor(port: Number) {
     this.server = net.createServer().listen(port);
     this.connectedClients = new Map<string, ConnectedClientInterface>();
-    this.server.on('connection', socket => this.registerClient(socket));
+    this.server.on('connection', (socket) => this.registerClient(socket));
   }
 
   private registerClient(socket: net.Socket) {
@@ -22,7 +22,7 @@ export default class Server {
   }
 
   private attachClientEventHandlers(client: ConnectedClientInterface) {
-    client.socket.on('data', data => this.broadcast({ clientId: client.getId(), payload: data }));
+    client.socket.on('data', (data) => this.broadcast({ clientId: client.getId(), payload: data }));
     client.socket.on('end', () => this.releaseClient(client));
   }
 
