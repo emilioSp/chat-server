@@ -22,7 +22,7 @@
     "ts-jest": "^25.3.1",
     "ts-node": "^8.8.2",
     "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.1",
+    "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-prettier": "^3.1.2",
     "typescript": "^3.8.3"
