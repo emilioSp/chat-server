@@ -1,5 +1,5 @@
-import ClientTestHelper from './ClientTestHelper';
-import Server from '../src/Server';
+import ClientTestHelper from './utils/ClientTestHelper';
+import Server from './Server';
 
 const PORT = 10000;
 const HOST = '127.0.0.1';
