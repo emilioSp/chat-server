@@ -20,7 +20,7 @@ describe('Test suite', () => {
     await client.connectToServer();
   });
 
-  test('A client should not receive its message', async done => {
+  test('A client should not receive its message', async () => {
     const client = new ClientTestHelper(HOST, PORT);
     await client.connectToServer();
     const messageToBroadcast = 'Hello from my self';
@@ -28,7 +28,6 @@ describe('Test suite', () => {
 
     client.socket.write(messageToBroadcast, () => {
       client.socket.end();
-      done();
     });
   });
 
